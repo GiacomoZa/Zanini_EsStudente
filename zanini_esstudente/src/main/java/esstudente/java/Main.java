@@ -25,6 +25,9 @@ public class Main {
         studente1.aggiungiVoto(28.0f, 0);
         studente1.aggiungiVoto(30.0f, 1);
         studente1.aggiungiVoto(25.0f, 2);
+        studente1.aggiungiVoto(28.0f, 0);
+        studente1.aggiungiVoto(30.0f, 1);
+        studente1.aggiungiVoto(25.0f, 2);
 
         studente2.aggiungiVoto(27.0f, 0);
         studente2.aggiungiVoto(29.0f, 1);

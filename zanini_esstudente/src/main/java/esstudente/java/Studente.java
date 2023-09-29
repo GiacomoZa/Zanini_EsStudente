@@ -54,13 +54,13 @@ public class Studente {
     }
 
     public void aggiungiVoto(float voto, int indiceCorso) {
-        if (indiceCorso >= 0 && indiceCorso < 10) {
+        if (indiceCorso >= 0 && indiceCorso < voti.size()+1) {
             voti.add(indiceCorso, voto);
         }
     }
 
     public void rimuoviVoti() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < voti.size(); i++) {
             voti.add(i, 0.0f);
         }
     }
@@ -68,7 +68,7 @@ public class Studente {
     public float calcolaMediaVoti() {
         float somma = 0.0f;
         int conteggio = 0;
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < voti.size(); i++) {
             if (voti.get(i) > 0) {
                 somma += voti.get(i);
                 conteggio++;
@@ -109,7 +109,7 @@ public class Studente {
         sb.append("Matricola: ").append(matricola).append("\n");
         sb.append("Corso di studi: ").append(corsoDiStudi).append("\n");
         sb.append("Voti:\n");
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < voti.size(); i++) {
             sb.append("Voto ").append(i + 1).append(": ").append(voti.get(i)).append("\n");
         }
         return sb.toString();
