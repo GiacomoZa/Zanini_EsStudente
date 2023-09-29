@@ -34,17 +34,17 @@ public class Main {
         studente3.aggiungiVoto(30.0f, 1);
         studente3.aggiungiVoto(26.0f, 2);
 
-        System.out.println("Informazioni sullo Studente 1:");
+        System.out.println("Informazioni sullo Studente 1: ");
         System.out.println(studente1.toString());
         System.out.println("Media dei voti dello studente 1: " + studente1.calcolaMediaVoti());
         System.out.println("Età dello studente 1: " + studente1.calcolaEta() + " anni");
 
-        System.out.println("\nInformazioni sullo studente 2:");
+        System.out.println("\nInformazioni sullo studente 2: ");
         System.out.println(studente2.toString());
         System.out.println("Media dei voti dello studente 2: " + studente2.calcolaMediaVoti());
         System.out.println("Età dello studente 2: " + studente2.calcolaEta() + " anni");
 
-        System.out.println("\nInformazioni sullo studente 3:");
+        System.out.println("\nInformazioni sullo studente 3: ");
         System.out.println(studente3.toString());
         System.out.println("Media dei voti dello studente 3: " + studente2.calcolaMediaVoti());
         System.out.println("Età dello studente 3: " + studente2.calcolaEta() + " anni");

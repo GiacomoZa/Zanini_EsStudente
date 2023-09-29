@@ -9,7 +9,7 @@ public class Studente {
     private String nome;
     private String cognome;
     private String corsoDiStudi;
-    private float[] voti = new float[10];
+    private ArrayList<Float> voti = new ArrayList<Float>();
     private int matricola;
     private Date dataDiNascita;
 
@@ -55,13 +55,13 @@ public class Studente {
 
     public void aggiungiVoto(float voto, int indiceCorso) {
         if (indiceCorso >= 0 && indiceCorso < 10) {
-            voti[indiceCorso] = voto;
+            voti.add(indiceCorso, voto);
         }
     }
 
     public void rimuoviVoti() {
         for (int i = 0; i < 10; i++) {
-            voti[i] = 0.0f;
+            voti.add(i, 0.0f);
         }
     }
 
@@ -69,8 +69,8 @@ public class Studente {
         float somma = 0.0f;
         int conteggio = 0;
         for (int i = 0; i < 10; i++) {
-            if (voti[i] > 0) {
-                somma += voti[i];
+            if (voti.get(i) > 0) {
+                somma += voti.get(i);
                 conteggio++;
             }
         }
@@ -110,7 +110,7 @@ public class Studente {
         sb.append("Corso di studi: ").append(corsoDiStudi).append("\n");
         sb.append("Voti:\n");
         for (int i = 0; i < 10; i++) {
-            sb.append("Voto ").append(i + 1).append(": ").append(voti[i]).append("\n");
+            sb.append("Voto ").append(i + 1).append(": ").append(voti.get(i)).append("\n");
         }
         return sb.toString();
     }
