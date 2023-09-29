@@ -60,9 +60,7 @@ public class Studente {
     }
 
     public void rimuoviVoti() {
-        for (int i = 0; i < voti.size(); i++) {
-            voti.add(i, 0.0f);
-        }
+        voti.remove(voti.size()-1);
     }
 
     public float calcolaMediaVoti() {
