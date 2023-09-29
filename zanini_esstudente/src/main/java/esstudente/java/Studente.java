@@ -54,9 +54,16 @@ public class Studente {
     }
 
     public void aggiungiVoto(float voto, int indiceCorso) {
-        if (indiceCorso >= 0 && indiceCorso < voti.size()+1) {
+        try{
+            if(voto <= 0 || voto > 30){
+                throw new Exception("Inserire un nuovo voto", null);
+            }else if (indiceCorso >= 0 && indiceCorso < voti.size()+1)  {
             voti.add(indiceCorso, voto);
+            }
+        }catch(Exception e){
+            System.out.println("Errore nell'inserimento dei voti");
         }
+        
     }
 
     public void rimuoviVoti() {

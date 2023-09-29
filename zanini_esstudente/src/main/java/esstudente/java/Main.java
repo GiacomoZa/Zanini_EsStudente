@@ -17,9 +17,24 @@ public class Main {
             dataNascita3 = new Date();
         }
 
-        Studente studente1 = new Studente("Mario", "Rossi", dataNascita1, 12345, "Ingegneria");
-        Studente studente2 = new Studente("Laura", "Bianchi", dataNascita2, 67890, "Economia");
-        Studente studente3 = new Studente("Marco", "Verdi", dataNascita3, 32860, "Biologia");
+        String nome="", cognome="", corsoDiStudi = "";
+        int matricola=0;
+        Scanner myObj = new Scanner(System.in);
+
+        for(int i=0; i<3; i++){
+            System.out.println("Inserire nome per studente"+i);
+            nome=myObj.nextLine();
+            System.out.println("Inserire cognome per studente"+i);
+            cognome=myObj.nextLine();
+            System.out.println("Inserire matricola per studente"+i);
+            matricola=myObj.nextInt();
+            System.out.println("Inserire corso di studi per studente"+i);
+            corsoDiStudi=myObj.nextLine();
+        }
+        
+        Studente studente1 = new Studente(nome, cognome, dataNascita1, matricola, corsoDiStudi);
+        Studente studente2 = new Studente(nome, cognome, dataNascita2, matricola, corsoDiStudi);
+        Studente studente3 = new Studente(nome, cognome, dataNascita3, matricola, corsoDiStudi);
 
         // Assegnamento dei voti
         studente1.aggiungiVoto(28.0f, 0);
